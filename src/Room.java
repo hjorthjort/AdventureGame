@@ -16,10 +16,10 @@ class Room {
         Monster monster = new Monster();
         Dice dice = new Dice(6);
         if (dice.rollDice() <= 2) {
-            player.hit(monster.damage);
+            player.hit(monster);
         }
         if (dice.rollDice() >= 4) {
-            player.heal(healingPotion.getHealingPower());
+            player.heal(healingPotion);
         }
     }
 }

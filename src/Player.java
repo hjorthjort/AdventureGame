@@ -14,7 +14,8 @@ class Player {
         return healthPoints;
     }
 
-    void hit(int damage) {
+    void hit(Monster monster) {
+        int damage = monster.getDamage();
         healthPoints = healthPoints - damage;
         System.out.println("MONSTER!");
         sleep();
@@ -32,7 +33,8 @@ class Player {
         }
     }
 
-    void heal(int pointsToHeal) {
+    void heal(HealingPotion potion) {
+        int pointsToHeal = potion.getHealingPower();
         healthPoints = healthPoints + pointsToHeal;
         System.out.println("HEALING POTION!");
         sleep();

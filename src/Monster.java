@@ -8,4 +8,8 @@ class Monster {
         Dice dice = new Dice(30);
         damage = dice.rollDice();
     }
+
+    public int getDamage() {
+        return damage;
+    }
 }
